@@ -91,6 +91,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Sam Codes Youtube Video](https://www.youtube.com/watch?v=WB4qM9Umzss&t=2590s) - This helped me in JavaScript code part since I am still a beginner in javaScript coding. 
 - [W3schools](https://www.w3schools.com/howto/howto_js_accordion.asp) - W3schools is once the resources which helps in animation.
+- [Online Tutorials Youtube Video](https://www.youtube.com/watch?v=dPLHi7tsoFU&list=LL&index=1) - It is one the great resource for animating an accordion. 
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 

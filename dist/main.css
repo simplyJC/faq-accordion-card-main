@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* ## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%) */
+/* ### Primary */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  display: grid;
+  /* justify-content: center;
+  align-items: center; */
+  place-items: center;
+  color: #4a4b5e;
+  background-image: linear-gradient(#af67e9, #6565e7);
+}
+
+.wrapper {
+  padding: 1.5rem;
+}
+
+.accordion__question-container img {
+  max-width: 15px;
+}
+
+.attribution {
+  padding-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #dddbe6;
+}
+
+.accordion {
+  background: #e7e7e9;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 9rem;
+  width: 400px;
+  height: 600px;
+}
+.accordion__title {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 2.5rem;
+}
+.accordion__question-answer {
+  padding: 1rem 0;
+}
+.accordion__question-container {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 40px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.accordion__question-container img {
+  padding-top: 0.5rem;
+  justify-self: flex-end;
+}
+.accordion__question-container h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.accordion__img-container {
+  transform: translateY(-20%);
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.accordion__img-container img {
+  position: absolute;
+  display: flex;
+  justify-self: center;
+  transform: translateY(-120px);
+  max-width: 300px;
+  filter: drop-shadow(0px 30px 1px rgba(0, 0, 0, 0.1));
+}
+
+.accordion__answer-container {
+  display: none;
+}
+
+.active .accordion__answer-container {
+  display: block;
+  padding: 1rem 0;
+}
+
+.active h2 {
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */

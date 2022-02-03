@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: $font-primary;
+  display: grid;
+  /* justify-content: center;
+  align-items: center; */
+
+  place-items: center;
+
+  color: $ff-neutral-dark-gray;
+  //background: $gradient-soft-blue;
+  background-image: linear-gradient($gradient-soft-violet, $gradient-soft-blue);
+}
+
+.wrapper {
+  padding: 1.5rem;
+}
+
+.accordion__question-container img {
+  max-width: 15px;
+}
+
+//Footer
+.attribution {
+  padding-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: rgb(221, 219, 230);
+}

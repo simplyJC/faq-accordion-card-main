@@ -6,10 +6,11 @@ body {
   min-height: 100vh;
   font-family: $font-primary;
   display: grid;
-  /* justify-content: center;
-  align-items: center; */
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
 
-  place-items: center;
+  //place-items: center;
 
   color: $ff-neutral-dark-gray;
   //background: $gradient-soft-blue;
@@ -23,7 +24,8 @@ body {
 
 //Footer
 .attribution {
-  padding-top: 2rem;
+  padding-top:  5px; 
+
   font-size: 11px;
   text-align: center;
 }

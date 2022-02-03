@@ -8,43 +8,37 @@
   margin-top: 9rem;
   width: 330px;
   height: 530px;
-
-  &__title {
-    text-align: center;
-    padding: 0 0 1.2rem 0;
-    font-size: 1.8rem;
-  }
-  &__question-answer {
-    padding: 1rem 0;
-    border-bottom: 1px solid $divider-grayish-blue;
-  }
-  &__question-container {
+  @include media-query(large) {
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: 1fr 40px;
-    align-items: flex-start;
-    cursor: pointer;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    width: 900px;
+    height: 510px;
+    margin: 0;
+    //padding: 1rem;
   }
-  &__question {
-    font-size: 0.75rem;
-    font-weight: 400;
 
-    &:hover {
-      color: $ff-primary-soft-red;
+  &__top {
+    @include media-query(large) {
+      // display: flex;
+      //align-items: center;
+      //justify-content: center;
     }
   }
-  &__arrow {
-    padding-top: 0.5rem;
-    justify-self: flex-end;
-    transition: ease-in 0.5s;
-    max-width: 10px;
-  }
+  //image
   &__img-container {
     transform: translateY(-20%);
     display: flex;
     justify-content: center;
     height: 100px;
     position: relative;
+    @include media-query(large) {
+      transform: none;
+      justify-self: center;
+      align-self: center;
+      height: 100%;
+      width: 100%;
+    }
     & img {
       position: absolute;
       display: flex;
@@ -52,21 +46,75 @@
       transform: translateY(-120px);
       max-width: 240px;
       filter: drop-shadow(0px 30px 1px rgba(0, 0, 0, 0.1));
+      @include media-query(large) {
+        transform: translateY(none);
+        transform: translateX(-30%) ;
+        justify-self: center;
+        align-self: center;
+        max-width: 400px
+      }
     }
   }
+  //accordion title
 
+  &__title {
+    text-align: center;
+    padding: 0 0 1.2rem 0;
+    font-size: 1.8rem;
+    color: $ff-primary-desaturated-blue;
+    @include media-query(large){
+      text-align: left; 
+    }
+  }
+  //bottom part
+  &__bottom{
+    padding-left: 2rem;
+  }
+  //container for question and answer
+  &__question-answer {
+    padding: 1rem 0;
+    border-bottom: 1px solid $divider-grayish-blue;
+  }
+  //container for question
+  &__question-container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 40px;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  //styles for question title
+  &__question {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: $ff-primary-desaturated-blue;
+    &:hover {
+      color: $ff-primary-soft-red;
+    }
+  }
+  //small arrow on the left style
+  &__arrow {
+    padding-top: 0.5rem;
+    justify-self: flex-end;
+    transition: ease-in 0.5s;
+    max-width: 10px;
+  }
+  //style for answer container
+  &__answer-container {
+    height: 0;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+    padding: 0.5rem 1rem 0 0;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: $ff-neutral-light-gray;
+  }
 }
 
-.accordion__answer-container {
-  height: 0;
-  overflow: hidden;
-  transition: ease-in 0.5s;
-  padding: 0.5rem 1rem 0 0;
-  font-size: 0.75rem;
-}
-
+//when user click this will applied
 .active h2 {
   font-weight: bold;
+  color: $ff-primary-desaturated-blue;
 }
 
 .active .accordion__answer-container {

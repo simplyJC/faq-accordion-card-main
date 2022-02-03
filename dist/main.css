@@ -51,9 +51,9 @@ body {
   min-height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
   display: grid;
-  /* justify-content: center;
-  align-items: center; */
-  place-items: center;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
   color: #4a4b5e;
   background-image: linear-gradient(#af67e9, #6565e7);
 }
@@ -63,7 +63,7 @@ body {
 }
 
 .attribution {
-  padding-top: 2rem;
+  padding-top: 5px;
   font-size: 11px;
   text-align: center;
 }
@@ -80,10 +80,62 @@ body {
   width: 330px;
   height: 530px;
 }
+@media (min-width: 900px) {
+  .accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    width: 900px;
+    height: 510px;
+    margin: 0;
+  }
+}
+.accordion__img-container {
+  transform: translateY(-20%);
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  position: relative;
+}
+@media (min-width: 900px) {
+  .accordion__img-container {
+    transform: none;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+.accordion__img-container img {
+  position: absolute;
+  display: flex;
+  justify-self: center;
+  transform: translateY(-120px);
+  max-width: 240px;
+  filter: drop-shadow(0px 30px 1px rgba(0, 0, 0, 0.1));
+}
+@media (min-width: 900px) {
+  .accordion__img-container img {
+    transform: translateY(none);
+    transform: translateX(-30%);
+    justify-self: center;
+    align-self: center;
+    max-width: 400px;
+  }
+}
 .accordion__title {
   text-align: center;
   padding: 0 0 1.2rem 0;
   font-size: 1.8rem;
+  color: #1d1e35;
+}
+@media (min-width: 900px) {
+  .accordion__title {
+    text-align: left;
+  }
+}
+.accordion__bottom {
+  padding-left: 2rem;
 }
 .accordion__question-answer {
   padding: 1rem 0;
@@ -99,6 +151,7 @@ body {
 .accordion__question {
   font-size: 0.75rem;
   font-weight: 400;
+  color: #1d1e35;
 }
 .accordion__question:hover {
   color: #f47c57;
@@ -109,32 +162,19 @@ body {
   transition: ease-in 0.5s;
   max-width: 10px;
 }
-.accordion__img-container {
-  transform: translateY(-20%);
-  display: flex;
-  justify-content: center;
-  height: 100px;
-  position: relative;
-}
-.accordion__img-container img {
-  position: absolute;
-  display: flex;
-  justify-self: center;
-  transform: translateY(-120px);
-  max-width: 240px;
-  filter: drop-shadow(0px 30px 1px rgba(0, 0, 0, 0.1));
-}
-
 .accordion__answer-container {
   height: 0;
   overflow: hidden;
   transition: ease-in 0.5s;
   padding: 0.5rem 1rem 0 0;
   font-size: 0.75rem;
+  cursor: pointer;
+  color: #787887;
 }
 
 .active h2 {
   font-weight: bold;
+  color: #1d1e35;
 }
 
 .active .accordion__answer-container {

@@ -18,18 +18,18 @@
     margin: 0;
   }
 
-  &__top {
+  &__left {
     @include media-query(large) {
       position: relative;
     }
   }
-  //image
+  //images container
   &__img-container {
     transform: translateY(-20%);
     display: flex;
     justify-content: center;
     height: 100px;
-
+    //adding a background pattern in images when in mobile view 
     &::before {
       content: url(/images/bg-pattern-mobile.svg);
       transform: translateY(-20%);
@@ -43,9 +43,9 @@
       align-self: center;
       height: 400px;
       width: 400px;
-     // overflow: hidden;
     }
   }
+  //woman illustration 
   &__image {
     position: absolute;
     display: flex;
@@ -54,17 +54,21 @@
     transform: translateY(-120px);
     max-width: 240px;
     @include media-query(large) {
+
       content: url('/images/illustration-woman-online-desktop.svg');
+      //position woman illustration desktop at left edge
       transform: translateX(-23%);
       justify-self: center;
       align-self: center;
-      background-repeat: no-repeat;
       max-width: 400px;
+      //clipping the illustration woman
       clip: rect(0px, 400px, 400px, 60px);
     }
   }
+  //hiding box on mobile view 
   &__image-box {
     display: none;
+    //showing on desktop view then apply position 
     @include media-query(large) {
       display: block;
       width: 150px;
@@ -74,13 +78,13 @@
       top: 170px;
     }
   }
-  
+  //hiding image pattern on mobile
   &__image-pattern {
     display: none;
+      //showing  image pattern on desktop and position it
     @include media-query(large) {
       display: block;
       transform: translate(-23%, -5%);
-      background-repeat: no-repeat;
     }
   }
   //accordion title
@@ -94,8 +98,8 @@
       text-align: left;
     }
   }
-  //bottom part
-  &__bottom {
+  //righ part
+  &__right {
     @include media-query(large) {
       padding: 2rem 5rem 0 0;
       height: 400px;

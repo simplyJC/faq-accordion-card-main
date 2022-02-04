@@ -16,6 +16,7 @@
     width: 900px;
     height: 490px;
     margin: 0;
+    padding-left: 0;
   }
 
   &__left {
@@ -29,7 +30,8 @@
     display: flex;
     justify-content: center;
     height: 100px;
-    //adding a background pattern in images when in mobile view 
+
+    //adding a background pattern in images when in mobile view
     &::before {
       content: url(/images/bg-pattern-mobile.svg);
       transform: translateY(-20%);
@@ -43,10 +45,11 @@
       align-self: center;
       height: 400px;
       width: 400px;
+      overflow: hidden;
     }
   }
-  //woman illustration 
-  &__image {
+  //woman illustration
+  &__image-mobile {
     position: absolute;
     display: flex;
     justify-self: center;
@@ -54,37 +57,45 @@
     transform: translateY(-120px);
     max-width: 240px;
     @include media-query(large) {
+      display: none;
 
-      content: url('/images/illustration-woman-online-desktop.svg');
-      //position woman illustration desktop at left edge
-      transform: translateX(-23%);
-      justify-self: center;
-      align-self: center;
-      max-width: 400px;
-      //clipping the illustration woman
-      clip: rect(0px, 400px, 400px, 60px);
+      
     }
   }
-  //hiding box on mobile view 
+
+  &__image-desktop {
+    //hiding desktop image
+    display: none;
+    @include media-query(large) {
+      //showing desktop image
+      display: block;
+      transform: translate(30%, 10%);
+      width: 400px;
+      height: 300px;
+    }
+  }
+  //hiding box on mobile view
   &__image-box {
     display: none;
-    //showing on desktop view then apply position 
+    //showing on desktop view then apply position
     @include media-query(large) {
       display: block;
       width: 150px;
       height: 150px;
       position: absolute;
-      left: -100px;
-      top: 170px;
+      left: -80px;
+      top: 150px;
+      
     }
   }
-  //hiding image pattern on mobile
+
   &__image-pattern {
-    display: none;
-      //showing  image pattern on desktop and position it
-    @include media-query(large) {
-      display: block;
-      transform: translate(-23%, -5%);
+     //hiding image pattern on mobile
+     display: none;
+       //showing  image pattern on desktop and position it
+     @include media-query(large) {
+       display: block;
+       transform: translate(-70%, -5%);
     }
   }
   //accordion title
@@ -98,7 +109,7 @@
       text-align: left;
     }
   }
-  //righ part
+  //right part
   &__right {
     @include media-query(large) {
       padding: 2rem 5rem 0 0;

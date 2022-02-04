@@ -88,6 +88,7 @@ body {
     width: 900px;
     height: 490px;
     margin: 0;
+    padding-left: 0;
   }
 }
 @media (min-width: 900px) {
@@ -117,9 +118,10 @@ body {
     align-self: center;
     height: 400px;
     width: 400px;
+    overflow: hidden;
   }
 }
-.accordion__image {
+.accordion__image-mobile {
   position: absolute;
   display: flex;
   justify-self: center;
@@ -128,13 +130,19 @@ body {
   max-width: 240px;
 }
 @media (min-width: 900px) {
-  .accordion__image {
-    content: url("/images/illustration-woman-online-desktop.svg");
-    transform: translateX(-23%);
-    justify-self: center;
-    align-self: center;
-    max-width: 400px;
-    clip: rect(0px, 400px, 400px, 60px);
+  .accordion__image-mobile {
+    display: none;
+  }
+}
+.accordion__image-desktop {
+  display: none;
+}
+@media (min-width: 900px) {
+  .accordion__image-desktop {
+    display: block;
+    transform: translate(30%, 10%);
+    width: 400px;
+    height: 300px;
   }
 }
 .accordion__image-box {
@@ -146,8 +154,8 @@ body {
     width: 150px;
     height: 150px;
     position: absolute;
-    left: -100px;
-    top: 170px;
+    left: -80px;
+    top: 150px;
   }
 }
 .accordion__image-pattern {
@@ -156,7 +164,7 @@ body {
 @media (min-width: 900px) {
   .accordion__image-pattern {
     display: block;
-    transform: translate(-23%, -5%);
+    transform: translate(-70%, -5%);
   }
 }
 .accordion__title {

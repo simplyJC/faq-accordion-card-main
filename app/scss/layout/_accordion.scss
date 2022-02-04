@@ -15,15 +15,6 @@
     width: 900px;
     height: 510px;
     margin: 0;
-    //padding: 1rem;
-  }
-
-  &__top {
-    @include media-query(large) {
-      // display: flex;
-      //align-items: center;
-      //justify-content: center;
-    }
   }
   //image
   &__img-container {

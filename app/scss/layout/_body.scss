@@ -9,11 +9,7 @@ body {
   grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
-
-  //place-items: center;
-
   color: $ff-neutral-dark-gray;
-  //background: $gradient-soft-blue;
   background-image: linear-gradient($gradient-soft-violet, $gradient-soft-blue);
 }
 
